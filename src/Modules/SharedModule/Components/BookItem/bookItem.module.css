@@ -1,0 +1,23 @@
+.booksSection {
+    background-color: #FCECEC;
+
+}
+
+
+
+.imgBook {
+    border: #ffff solid 20px;
+
+    height: 350px;
+    background-color: #ffff;
+}
+
+
+
+.link {
+    color: #ED553B;
+    font-weight: 700;
+    text-decoration: none;
+
+
+}

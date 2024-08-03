@@ -1,0 +1,81 @@
+.SubscribeSection {
+    background: #FCEBEA;
+    height: 500px;
+
+
+
+}
+
+.subscribeContainer {
+    width: 90%;
+    margin: auto;
+    background-color: #ED553B;
+    height: 370px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.h2 {
+
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    letter-spacing: 0.01em;
+    color: #fff;
+
+
+}
+
+.p {
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 41.6px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 10px 0px;
+
+}
+
+.mailContainer {
+
+    background-color: #fff;
+    margin: auto;
+    width: 698px;
+    height: 103px;
+    position: absolute;
+    top: 90%;
+    left: 26%;
+    gap: 0px;
+    opacity: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+
+}
+
+.subscribe {
+    border: solid 1px #EF6B4A;
+    padding: 10px 20px;
+    background-color: #EF6B4A;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.5s;
+    width: 206px;
+    height: 71px;
+    font-weight: 600;
+}
+
+.i {
+    padding: 15px 20px;
+
+    margin-top: 10px;
+    border: 2px solid #DFDFDF;
+}

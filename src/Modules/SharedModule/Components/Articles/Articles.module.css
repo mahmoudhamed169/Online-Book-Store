@@ -1,0 +1,36 @@
+.p {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 43.16px;
+    text-align: left;
+    color: #173F5F;
+
+}
+
+.social {
+    float: right;
+    color: #173F5F;
+}
+
+.clr {
+    clear: both;
+}
+
+.btn {
+    border: solid 1px #393280;
+    border-radius: 6px;
+    color: #393280;
+    background-color: transparent;
+    padding: 12px 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    width: 220px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #393280;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}

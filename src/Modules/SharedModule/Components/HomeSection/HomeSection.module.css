@@ -1,0 +1,46 @@
+.slider {
+    background-image: linear-gradient(78.83deg, #FFE6E6 8.52%, #F5FFFE 68.88%, #FFFFFF 101.74%);
+    color: #393280;
+    height: 657px;
+
+
+}
+
+.title {
+
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 87px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+.p {
+
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 39.6px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+}
+
+.button {
+    border: solid 1px #393280;
+    border-radius: 6px;
+    color: #393280;
+    background-color: transparent;
+    padding: 20px 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    width: 185px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #393280;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}

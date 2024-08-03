@@ -1,0 +1,20 @@
+/* #ED553B */
+.footer {
+    background-color: #ED553B;
+}
+
+.p {
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 8px;
+}

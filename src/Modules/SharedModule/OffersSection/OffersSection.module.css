@@ -1,0 +1,17 @@
+.offersContainer {
+    width: 90%;
+    margin: auto;
+    background-color: #FCEBEA;
+
+}
+
+.p {
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #393280;
+
+}
