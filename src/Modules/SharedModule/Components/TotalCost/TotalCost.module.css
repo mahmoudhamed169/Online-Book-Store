@@ -1,0 +1,11 @@
+.total {
+    background: linear-gradient(180deg, #FFE5E5 0%, #F5FFFE 100%);
+
+    h6,
+    p {
+        color: #393280;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+}

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ChangePassModel from "../ChangePassModel/ChangePassModel";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Badge from "@mui/material/Badge";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 export default function MainNavBar() {
   const logOut = async () => {
@@ -80,15 +82,15 @@ export default function MainNavBar() {
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0  ">
               <li className="nav-item dropdown ">
-                <a
+                <Link
                   className="nav-link dropdown-toggle border-end px-3"
-                  href="#"
+                  to=""
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   <i className="fa-regular fa-user"></i>
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li className="my-2">
                     <Link className="dropdown-item" to={"/"} onClick={logOut}>
@@ -105,9 +107,20 @@ export default function MainNavBar() {
               </li>
 
               <li className="nav-item ">
-                <a className="nav-link border-end px-3" href="#">
-                  <i className="fa-solid fa-bag-shopping"></i>
-                </a>
+                <Link className="nav-link border-end px-3" to="/dashboard/cart">
+                  {/* <i className="fa-solid fa-bag-shopping"></i> */}
+                  <Badge
+                    badgeContent={4}
+                    sx={{
+                      "& .MuiBadge-badge": {
+                        backgroundColor: "#ED553B",
+                        color: "#fff",
+                      },
+                    }}
+                  >
+                    <ShoppingBagIcon color="action" />
+                  </Badge>
+                </Link>
               </li>
               <li className="nav-item ">
                 <a className="nav-link  px-3" href="#">

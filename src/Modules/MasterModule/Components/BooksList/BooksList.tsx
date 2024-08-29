@@ -87,7 +87,7 @@ export default function BooksList() {
     <>
       <TopHeader />
       <SharedNavBar />
-      <BasicBreadcrumbs />
+      <BasicBreadcrumbs secendPath={"PRODUCT"} />
 
       {/* <div className="p-3">
         <div className="row p-3">

@@ -2,7 +2,6 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
-import HomeIcon from "@mui/icons-material/Home";
 import styles from "./booklistBreadcrumbs.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +10,7 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   console.info("You clicked a breadcrumb.");
 }
 
-export default function BasicBreadcrumbs() {
+export default function BasicBreadcrumbs({ secendPath }) {
   const navigate = useNavigate();
   return (
     <div
@@ -23,6 +22,7 @@ export default function BasicBreadcrumbs() {
         <Link
           underline="hover"
           color="#393280"
+          to="/home"
           onClick={(e) => {
             e.preventDefault();
             navigate("/dashboard/home");
@@ -31,7 +31,7 @@ export default function BasicBreadcrumbs() {
           HOME
         </Link>
 
-        <Typography color="#393280">PRODUCT</Typography>
+        <Typography color="#393280">{secendPath}</Typography>
       </Breadcrumbs>
     </div>
   );
