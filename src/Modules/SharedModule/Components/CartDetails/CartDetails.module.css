@@ -1,4 +1,21 @@
-.datails {
+.details {
+    position: relative;
     background-image: linear-gradient(to right, #FFE5E5, #F5FFFE);
+    /* Make the container relative to position the clear button absolutely */
+}
+
+.clearButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem !important;
+    color: #ED553B !important;
+
+
+
+}
+
+.clearButton:hover {
+    color: #d9534f !important;
 
 }

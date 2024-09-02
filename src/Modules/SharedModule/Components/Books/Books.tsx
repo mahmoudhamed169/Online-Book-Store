@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Books.module.css";
 import axios from "axios";
-import bookImg1 from "../.././../../assets/books/cover1.jpg";
-import bookImg2 from "../.././../../assets/books/cover2.jpg";
-import bookImg3 from "../.././../../assets/books/cover3.jpg";
 
 import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,10 +13,7 @@ import BookItem from "../BookItem/BookItem";
 
 export default function Books() {
   const navigate = useNavigate();
-  const randomImage = () => {
-    const images = [bookImg1, bookImg3, bookImg2];
-    return images[Math.floor(Math.random() * images.length)];
-  };
+
   const [booksList, setBooksList] = useState([]);
   const getAllBooks = async () => {
     try {
@@ -42,7 +36,7 @@ export default function Books() {
     return () => {};
   }, []);
   return (
-    <div className={`${styles.booksSection} vh-100  `}>
+    <div className={`${styles.booksSection} pb-5 `}>
       <div className="title py-5 text-center ">
         <p className="text-muted text-uppercase">Some quality items</p>
         <h2 className="">New Release Books</h2>
@@ -53,10 +47,9 @@ export default function Books() {
       </div>
 
       <Swiper
-        // install Swiper modules
         modules={[Pagination, A11y]}
-        spaceBetween={10}
-        slidesPerView={1}
+        spaceBetween={0}
+        slidesPerView={4}
         pagination={{ clickable: true }}
         breakpoints={{
           640: {
@@ -64,23 +57,20 @@ export default function Books() {
             spaceBetween: 0,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 0,
           },
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        className=" "
+        className=" pb-4"
         id="bookSwiper"
       >
         {booksList.map((book, index) => (
-          <SwiperSlide className="book " key={index}>
-            <BookItem book={book} randomImage={randomImage} />
-            <hr className="mb-5 " />
+          <SwiperSlide className="book" key={index}>
+            <BookItem book={book} />
           </SwiperSlide>
         ))}
       </Swiper>

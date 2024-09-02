@@ -1,12 +1,17 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import ChangePassModel from "../ChangePassModel/ChangePassModel";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Badge from "@mui/material/Badge";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store";
 
 export default function MainNavBar() {
+  const totalQuantity = useSelector(
+    (state: RootState) => state.cart.totalQuantity
+  );
+
   const logOut = async () => {
     try {
       const response = await axios.get(
@@ -110,7 +115,7 @@ export default function MainNavBar() {
                 <Link className="nav-link border-end px-3" to="/dashboard/cart">
                   {/* <i className="fa-solid fa-bag-shopping"></i> */}
                   <Badge
-                    badgeContent={4}
+                    badgeContent={totalQuantity}
                     sx={{
                       "& .MuiBadge-badge": {
                         backgroundColor: "#ED553B",
@@ -118,7 +123,7 @@ export default function MainNavBar() {
                       },
                     }}
                   >
-                    <ShoppingBagIcon color="action" />
+                    <i className="fa-solid fa-shopping-cart fs-4"></i>
                   </Badge>
                 </Link>
               </li>

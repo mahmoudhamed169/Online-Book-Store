@@ -1,20 +1,15 @@
 .booksSection {
     background-color: #FCECEC;
-
-
 }
 
 
 
-.imgBook {
-    border: #ffff solid 20px;
-    height: 350px;
-    background-color: #ffff;
-}
+
 
 
 
 .link {
+
     color: #ED553B;
     font-weight: 700;
     text-decoration: none;
@@ -28,14 +23,14 @@
     .link {
         bottom: 2px;
         margin-top: 20px;
-        /* Adjust bottom as needed */
+
     }
 }
 
-/* Media query for even smaller screens (e.g., mobile devices) */
+
 @media (max-width: 480px) {
     .link {
         bottom: 30px;
-        /* Adjust bottom for small screens */
+
     }
 }

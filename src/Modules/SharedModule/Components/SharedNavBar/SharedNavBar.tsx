@@ -7,8 +7,14 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import logoImg from "../../../../assets/Logo.png";
 import TemporaryDrawer from "../TemporaryDrawer/TemporaryDrawer";
+import { Badge } from "@mui/material";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store";
 
 export default function SharedNavBar() {
+  const totalQuantity = useSelector(
+    (state: RootState) => state.cart.totalQuantity
+  );
   const logOut = async () => {
     try {
       const response = await axios.get(
@@ -85,9 +91,20 @@ export default function SharedNavBar() {
               </li>
 
               <li className="nav-item ">
-                <a className="nav-link border-end px-3" href="#">
-                  <i className="fa-solid fa-bag-shopping"></i>
-                </a>
+                <Link className="nav-link border-end px-3" to="/dashboard/cart">
+                  {/* <i className="fa-solid fa-bag-shopping"></i> */}
+                  <Badge
+                    badgeContent={totalQuantity}
+                    sx={{
+                      "& .MuiBadge-badge": {
+                        backgroundColor: "#ED553B",
+                        color: "#fff",
+                      },
+                    }}
+                  >
+                    <i className="fa-solid fa-shopping-cart fs-4"></i>
+                  </Badge>
+                </Link>
               </li>
               <li className="nav-item ">
                 <a className="nav-link  px-3" href="#">
